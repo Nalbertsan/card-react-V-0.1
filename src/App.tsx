@@ -1,7 +1,6 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import SingleCard from './components/SingleCard';
 import Cardform from './components/Cardform';
 import FlippableCard from './components/FlippableCard';
 
