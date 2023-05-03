@@ -1,7 +1,8 @@
 import React from 'react'
+import UPayContext from '../../use/UPayContext'
 
 export default function cardfront() {
-    
+    const {infoCard} = UPayContext()
     return (
             <div className="front" >
                 <div id="ccsingle"></div>
@@ -18,13 +19,13 @@ export default function cardfront() {
                                 </g>
                                 <path className="darkcolor secondarycolor" d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
                             </g>
-                            <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber" className="st2 st3 st4">0123 4567 8910 1112</text>
-                            <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname" className="st2 st5 st6">###################</text>
-                            <text transform="matrix(1 0 0 1 54.1074 389.8793)" className="st7 st5 st8">Nome Do Titutar</text>
+                            <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber" className="st2 st3 st4">{infoCard.cardNumber}</text>
+                            <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname" className="st2 st5 st6">{infoCard.name}</text>
+                            <text transform="matrix(1 0 0 1 54.1074 389.8793)" className="st7 st5 st8">Nome Do Titular</text>
                             <text transform="matrix(1 0 0 1 479.7754 388.8793)" className="st7 st5 st8">Validade</text>
                             <text transform="matrix(1 0 0 1 65.1054 241.5)" className="st7 st5 st8">Número Do Cartão</text>
                             <g>
-                                <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire" className="st2 st5 st9">01/23</text>
+                                <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire" className="st2 st5 st9">{infoCard.date}</text>
                                 <text transform="matrix(1 0 0 1 479.3848 417.0097)" className="st2 st10 st11">VALIDO</text>
                                 <text transform="matrix(1 0 0 1 479.3848 435.6762)" className="st2 st10 st11">ATÉ</text>
                                 <polygon className="st2" points="554.5,421 540.4,414.2 540.4,427.9 		" />
