@@ -15,13 +15,14 @@ export default function Payment() {
     })
 
     return (
-        <PayContext.Provider value={{infoCard,setInfoCard}}>
+        <PayContext.Provider value={{ infoCard, setInfoCard }}>
             <div className="App">
-                <div className="payment-title">
-                    <h1>Informações de Pagamento</h1>
-                </div>
-                <div className="Cardplusform">
-                    <FlippableCard/>
+
+                <div className="flex flex-col items-center justify-center">
+                    <div className="text-2xl justify-center">
+                        <h1 >Informações de Pagamento</h1>
+                    </div>
+                    <FlippableCard />
                     <Cardform />
                 </div>
             </div>
