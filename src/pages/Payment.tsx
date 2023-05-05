@@ -8,23 +8,19 @@ import { PayContext } from '../contexts/payContext';
 export default function Payment() {
 
     const [infoCard, setInfoCard] = React.useState({
-        cardNumber: "0123 4567 8910 1112",
-        name: "***** ***** *****",
-        date: "00/00",
-        cvv: "123"
+        cardNumber: "",
+        name: "",
+        date: "",
+        cvv: ""
     })
 
     return (
         <PayContext.Provider value={{ infoCard, setInfoCard }}>
-            <div className="App">
-
-                <div className="flex flex-col items-center justify-center">
-                    <div className="text-2xl justify-center">
-                        <h1 >Informações de Pagamento</h1>
+            <div className="flex h-screen w-screen justify-center gap-y-12">
+                    <div className="flex flex-col justify-center items-center h-full w-4/6 ">
+                        <FlippableCard />
+                        <Cardform />
                     </div>
-                    <FlippableCard />
-                    <Cardform />
-                </div>
             </div>
         </PayContext.Provider>
     )

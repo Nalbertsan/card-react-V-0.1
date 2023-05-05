@@ -1,6 +1,9 @@
 import React from 'react';
+import UPayContext from '../../use/UPayContext';
 
 export default function Cardback() {
+    const {infoCard} = UPayContext()
+
     return(
         <div className="back">
             <svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -11,7 +14,7 @@ export default function Cardback() {
                 <g id="Back">
                     <g id="Page-1_2_">
                         <g id="amex_2_">
-                            <path id="Rectangle-1_2_" className="darkcolor greydark" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                            <path id="Rectangle-1_2_" className="darkcolor primarycolor" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
                     C0,17.9,17.9,0,40,0z" />
                         </g>
                     </g>
@@ -23,13 +26,13 @@ export default function Cardback() {
                         <rect x="42.9" y="224.5" className="st4" width="664.1" height="10.5" />
                         <path className="st5" d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
                     </g>
-                    <text transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity" className="st6 st7">420</text>
+                    <text transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity" className="st6 st7">{infoCard.cvv}</text>
                     <g className="st8">
                         <text transform="matrix(1 0 0 1 518.083 280.0879)" className="st9 st6 st10">Cód. De Segurança</text>
                     </g>
                     <rect x="58.1" y="378.6" className="st11" width="375.5" height="13.5" />
                     <rect x="58.1" y="405.6" className="st11" width="421.7" height="13.5" />
-                    <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback" className="st12 st13">Rafael Tosta</text>
+                    <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback" className="st12 st13">{infoCard.name}</text>
                 </g>
             </svg>
         </div>

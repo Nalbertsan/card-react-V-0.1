@@ -4,7 +4,6 @@ import './flip.css';
 import Cardfront from '../Cardfront';
 import Cardback from '../Cardback';
 
-
 export default function FlippableCard() {
 
   const [flipped, setFlipped] = React.useState(true);
@@ -15,13 +14,14 @@ export default function FlippableCard() {
   }
 
   return (
-    
-        <div className="flipCreditCard" >
-            <CSSTransition in={flipped} timeout={3000} classNames="flip" nodeRef={nodeRef}>
-                <div ref={nodeRef} onClick={handleClick} className="creditcard">
-                    <Cardfront/>
-                    <Cardback/>
-                </div>
-            </CSSTransition>
-        </div>);
+    <div className="h-full w-full ">
+      <div className=" w-full h-full flex justify-center perspective-1000 items-end" >
+        <CSSTransition in={flipped} timeout={3000} classNames="flip" nodeRef={nodeRef}>
+          <div ref={nodeRef} onClick={handleClick} className="creditcard max-w-md w-full items-center flex pb-44 ">
+            <Cardfront />
+            <Cardback />
+          </div>
+        </CSSTransition>
+      </div>
+    </div>);
 }
