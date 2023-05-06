@@ -5,13 +5,15 @@ interface PayContextType {
     cardNumber: string,
     name: string,
     date: string,
-    cvv: string
+    cvv: string,
+    fucus: boolean
   };
   setInfoCard: React.Dispatch<React.SetStateAction<{ 
     cardNumber: string,
     name: string,
     date: string,
-    cvv: string 
+    cvv: string,
+    fucus: boolean
   }>>;
 }
 
@@ -20,7 +22,8 @@ interface PayContextType {
     infoCard: { cardNumber: "" ,
     name: "",
     date: "",
-    cvv: ""},
+    cvv: "",
+    fucus: false},
     setInfoCard: () => {},
   });
   
