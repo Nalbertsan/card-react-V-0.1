@@ -3,6 +3,16 @@ import { CSSTransition } from 'react-transition-group';
 import './flip.css';
 import Cardfront from '../Cardfront';
 import Cardback from '../Cardback';
+import {
+  Dialog,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Input,
+  Checkbox,
+} from "@material-tailwind/react";
 
 export default function FlippableCard() {
 
@@ -17,7 +27,7 @@ export default function FlippableCard() {
     <div className="h-full w-full ">
       <div className=" w-full h-full flex justify-center perspective-1000 items-end" >
         <CSSTransition in={flipped} timeout={3000} classNames="flip" nodeRef={nodeRef}>
-          <div ref={nodeRef} onClick={handleClick} className="creditcard max-w-md w-full items-center flex pb-44 ">
+          <div ref={nodeRef} onClick={handleClick} className="creditcard max-w-md w-full items-center flex ">
             <Cardfront />
             <Cardback />
           </div>
